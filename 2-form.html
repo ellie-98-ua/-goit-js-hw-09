@@ -6,29 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <script type="module" crossorigin src="/goit-js-hw-09/2-form.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/modulepreload-polyfill-B5Qt9EMX.js">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-CFrPtiMb.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/styles-DS6uekS-.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-C_5W9S_E.css">
   </head>
   <body>
 
     <main>
       <div class="container">
-        <a class="back-link" href="./index.html">Go back</a>
         <h1 class="main-title">Form</h1>
         <a class="back-link" href="./index.html">Go back</a>
 
       </div>
     </main>
 
-    <form class="feedback-form" autocomplete="off">
-  <label>Email
-    <input type="email" name="email" autofocus />
-  </label>
-  <label>Message
-    <textarea name="message" rows="8"></textarea>
-  </label>
-  <button type="submit">Submit</button>
-</form>
+    <div class="container container-form">
+      <form class="feedback-form" autocomplete="off">
+    <div class="form-label">
+      <label class="label" for="user-email">Email>
+        <span class="text-valid">Succes!</span>
+        <span class="text-invalid">Invalid email, try again</span></label>
+        <input class="form-input" type="email" name="email" autofocus
+        pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})"
+        title="Format: name@example.com"/>
+      </label>
+    </div>
+
+    <label class="form-message">Message
+      <textarea class="input-message" name="message" rows="8"></textarea>
+    </label>
+    <button class="feedback-buttom" type="submit">Submit</button>
+  </form>
+    </div>
 
   </body>
 </html>
