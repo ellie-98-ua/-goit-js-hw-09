@@ -11,21 +11,29 @@
 
     <main>
       <div class="container">
-        <a class="back-link" href="./index.html">Go back</a>
         <h1 class="main-title">Form</h1>
         <load src="/partials/back-link.html" />
       </div>
     </main>
 
-    <form class="feedback-form" autocomplete="off">
-  <label>Email
-    <input type="email" name="email" autofocus />
-  </label>
-  <label>Message
-    <textarea name="message" rows="8"></textarea>
-  </label>
-  <button type="submit">Submit</button>
-</form>
+    <div class="container container-form">
+      <form class="feedback-form" autocomplete="off">
+    <div class="form-label">
+      <label class="label" for="user-email">Email>
+        <span class="text-valid">Succes!</span>
+        <span class="text-invalid">Invalid email, try again</span></label>
+        <input class="form-input" type="email" name="email" autofocus
+        pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})"
+        title="Format: name@example.com"/>
+      </label>
+    </div>
+
+    <label class="form-message">Message
+      <textarea class="input-message" name="message" rows="8"></textarea>
+    </label>
+    <button class="feedback-buttom" type="submit">Submit</button>
+  </form>
+    </div>
 
     <script type="module" src="./js/2-form.js"></script>
   </body>
